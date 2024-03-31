@@ -159,7 +159,9 @@ public class fsk_receiver implements StringRxEvent {
 		
 		
 		if (!calcuate_FFT())
-			return out;
+			{
+			    return out;
+			}
 		
         int windows = 15;
         int win_size = (int)FFT_half_len/windows;
@@ -415,7 +417,9 @@ public class fsk_receiver implements StringRxEvent {
 		
 		
 		if (!calcuate_FFT())
-			return out;
+			{
+			    return out;
+			}
         
         double[] int_f1 = new double[2*search_range -1];
         double[] int_f2 = new double[2*search_range -1];
@@ -487,9 +491,13 @@ public class fsk_receiver implements StringRxEvent {
 			out[0] = (double)(midbin_1)/(2*FFT_half_len);
 		
 		if ( int_f2[2*search_range -2] < peak/3 )
-			out[1] = (double)-1;
+			{
+			    out[1] = (double)-1;
+			}
 		else
-			out[1] = (double)(midbin_2)/(2*FFT_half_len);
+			{
+			    out[1] = (double)(midbin_2)/(2*FFT_half_len);
+			}
 	
         return out;
 	}

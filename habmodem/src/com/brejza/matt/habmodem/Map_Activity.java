@@ -140,7 +140,9 @@ public class Map_Activity extends MapActivity implements AddPayloadFragment.Noti
     private void setMapFile(){
     	
     	if (_mapFile_set)
-    		return;
+    		{
+    		    return;
+    		}
           String mapst = PreferenceManager.getDefaultSharedPreferences(this.getApplicationContext()).getString("pref_map_path", "");
        //  SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
        //  String mapst = settings.getString("silentMode", "");

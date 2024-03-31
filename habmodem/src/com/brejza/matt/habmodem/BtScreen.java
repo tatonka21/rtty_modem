@@ -244,7 +244,9 @@ import android.widget.AdapterView.OnItemClickListener;
 				lvAdapter.notifyDataSetChanged();
 				
 				if (mHandler == null)
-	        		mHandler = new Handler();
+	        		{
+	        		    mHandler = new Handler();
+	        		}
 	            mHandler.postDelayed(new Runnable() {
 	                @Override
 	                public void run() {
@@ -519,7 +521,9 @@ import android.widget.AdapterView.OnItemClickListener;
     	if (mService.listRxStr == null)
     		return;
     	if (mService.listRxStr.size() < 1)
-    		return;    	
+    		{
+    		    return;
+    		}    	
     	
     	 handler.post(new Runnable() {
              @Override

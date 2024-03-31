@@ -357,7 +357,9 @@ public class StatusScreen extends Activity implements AddPayloadFragment.NoticeD
     	if (mService.listRxStr == null)
     		return;
     	if (mService.listRxStr.size() < 1)
-    		return;
+    		{
+    		    return;
+    		}
     	
     	
     	 handler2.post(new Runnable() {
@@ -533,7 +535,9 @@ public class StatusScreen extends Activity implements AddPayloadFragment.NoticeD
 	            	  
 	            	  if ((getResources().getConfiguration().screenLayout & 
 	                  	    Configuration.SCREENLAYOUT_SIZE_MASK) < Configuration.SCREENLAYOUT_SIZE_LARGE) 
-	            		  enScroll = true;
+	            		  {
+	            		      enScroll = true;
+	            		  }
 	            	  
 	            	   // if there is no need to scroll, scrollAmount will be <=0
 	            	    if(scrollAmount>0 && (lastScrollLength < txtchars.getLineCount()) && enScroll)

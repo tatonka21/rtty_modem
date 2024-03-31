@@ -92,9 +92,13 @@ public class GraphsFragment extends DialogFragment {
 	           		  if (line == null)
 	           			  line = new LineGraph(_data);
 	           		  if (isChecked)
-	           			line.addPayload(buttonView.getText().toString());
+	           			{
+	           			    line.addPayload(buttonView.getText().toString());
+	           			}
 	           		  else
-	           			line.clearPayload(buttonView.getText().toString());
+	           			{
+	           			    line.clearPayload(buttonView.getText().toString());
+	           			}
 	           		  
 	           		  drawGraph();
         		 }
@@ -125,7 +129,9 @@ public class GraphsFragment extends DialogFragment {
 	           			  	buttonView.setChecked(false);
 	           		  }
 	           		  else
-	           			line.clearField(buttonView.getText().toString());
+	           			{
+	           			    line.clearField(buttonView.getText().toString());
+	           			}
 	           		  
 	           		  drawGraph();
         		 } 

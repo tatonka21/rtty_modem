@@ -941,9 +941,13 @@ public class Habitat_interface {
 							  if (tosend != null)								
 								  res = _upload(tosend);  //now we have some telem, lets send it							  
 							  if (!res)
-								  System.out.println("UPLOAD FAILED :(");
+								  {
+								      System.out.println("UPLOAD FAILED :(");
+								  }
 							  else //success, remove data from queue
-								  out_buff.poll();
+								  {
+								      out_buff.poll();
+								  }
 						  }
 						  else if (qi.type == 1)
 						  {			//get data
