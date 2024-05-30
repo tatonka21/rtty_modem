@@ -264,25 +264,25 @@ public class Habitat_interface {
 								format = fields.getJSONObject(j).getString("format");
 									
 							
-							if (name.equals("sentence_id")){
+							if ("sentence_id".equals(name)){
 							}
-							else if  (name.equals("time")){
+							else if  ("time".equals(name)){
 							}
-							else if (name.equals("latitude" )){
+							else if ("latitude".equals(name )){
 								if (sensor.equals("base.ascii_int"))
 								{
 									//TODO
 									tc.gpsFormat = TelemetryConfig.GPSFormat.INT;
 								}
 							}
-							else if (name.equals("longitude" )){
+							else if ("longitude".equals(name )){
 								if (sensor.equals("base.ascii_int"))
 								{
 									//TODO
 									tc.gpsFormat = TelemetryConfig.GPSFormat.INT;
 								}
 							}
-							else if (name.equals("altitude" )){
+							else if ("altitude".equals(name )){
 							}
 							else {
 								if (sensor.equals("base.ascii_int"))

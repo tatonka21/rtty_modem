@@ -73,7 +73,7 @@ public class TelemetryConfig implements java.io.Serializable {
 		double doffset;
 		double dscale;
 		
-		if (!scale.equals("")){
+		if (!"".equals(scale)){
 			try{
 				dscale = Double.parseDouble(scale);
 				_fieldScale.set(fieldindex, dscale);
@@ -84,7 +84,7 @@ public class TelemetryConfig implements java.io.Serializable {
 			}
 		}
 		
-		if (!offset.equals("")){
+		if (!"".equals(offset)){
 			try{
 				doffset = Double.parseDouble(offset);
 				_fieldOffset.set(fieldindex, doffset);
@@ -95,7 +95,7 @@ public class TelemetryConfig implements java.io.Serializable {
 			}
 		}
 		
-		if (!round.equals("")){
+		if (!"".equals(round)){
 			try{
 				iround = Integer.parseInt(round);
 				_fieldRound.set(fieldindex, iround);

@@ -289,7 +289,7 @@ public class Document implements Map {
 	 * @return
 	 */
 	public JSONObject getJSONObject() {
-		if (!loaded && database!=null && getId()!=null && !getId().equals("")) {
+		if (!loaded && database!=null && getId()!=null && !"".equals(getId())) {
 			try {
         refresh();
       } catch (IOException e) {

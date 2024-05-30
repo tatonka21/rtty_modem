@@ -258,7 +258,7 @@ public class Database {
    */
   public void saveDocument(Document doc, String docId) throws IOException {
     CouchResponse resp;
-    if (docId == null || docId.equals("")) {
+    if (docId == null || "".equals(docId)) {
       resp = session.post(name, doc.getJSONObject().toString());
     }
     else {

@@ -934,7 +934,7 @@ public class Dsp_service extends Service implements StringRxEvent, HabitatRxEven
 	private void InsertString(Telemetry_string str, boolean checksum)
 	{
 		String call = str.callsign.toUpperCase(Locale.US);
-		if (call.equals(""))
+		if ("".equals(call))
 			return ;
 		if (!checksum && !mapPayloads.containsKey(call))
 			return;
@@ -1335,7 +1335,7 @@ public class Dsp_service extends Service implements StringRxEvent, HabitatRxEven
 		    String call = entry.getKey().toUpperCase(Locale.US);
 		    List<GeoPoint> value = entry.getValue();
 		    
-		    if (payloadExists(call) && !call.equals(""))
+		    if (payloadExists(call) && !"".equals(call))
 		    {
 		    	Payload p = mapPayloads.get(call);
 		    	p.predictedPath = value;

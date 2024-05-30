@@ -107,7 +107,7 @@ public class GraphsFragment extends DialogFragment {
         	LinearLayout ll = (LinearLayout)v.findViewById(R.id.llGraphsFields);
         	CheckBox ck = new CheckBox(v.getContext());
         	ck.setText(fields.get(i));
-        	if (fields.get(i).equals("altitude")){
+        	if ("altitude".equals(fields.get(i))){
         		ck.setChecked(true);
         		// if (line == null)
           		//	  line = new LineGraph(_data);
