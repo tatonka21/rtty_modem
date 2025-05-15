@@ -1,5 +1,7 @@
 package com.brejza.matt.habmodem;
 
+import io.github.pixee.security.HostValidator;
+import io.github.pixee.security.Urls;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -95,7 +97,7 @@ public class PredictionGrabber {
 	    InputStream is = null;
         
 	    try {
-	        URL url = new URL(myurl);
+	        URL url = Urls.create(myurl, Urls.HTTP_PROTOCOLS, HostValidator.DENY_COMMON_INFRASTRUCTURE_TARGETS);
 	        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 	        conn.setReadTimeout(10000 /* milliseconds */);
 	        conn.setConnectTimeout(15000 /* milliseconds */);
