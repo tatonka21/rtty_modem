@@ -13,6 +13,7 @@
 
 package com.brejza.matt.habmodem;
 
+import io.github.pixee.security.ObjectInputFilters;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -1414,6 +1415,7 @@ public class Dsp_service extends Service implements StringRxEvent, HabitatRxEven
 			if (System.currentTimeMillis() - file.lastModified() < (24*60*60*1000)){	//only load previous state if <1day old		
 				FileInputStream fileIn = openFileInput(filename1);
 				ObjectInputStream in = new ObjectInputStream(fileIn);
+				ObjectInputFilters.enableObjectFilterIfUnprotected(in);
 				mapPayloads = (ConcurrentHashMap<String, Payload>) in.readObject();
 				in.close();
 				fileIn.close();
